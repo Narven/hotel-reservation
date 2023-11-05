@@ -1,0 +1,39 @@
+# Create a New User
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+{
+  "first_name": "mark",
+  "last_name": "from the block",
+  "email": "mark@mark.com",
+  "password": "1234567"
+}
+
+###
+
+# List all users
+GET http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+###
+
+# Get single user
+GET http://localhost:5000/api/v1/users/6546cb7cce2c59e869ebffb6
+Content-Type: application/json
+
+###
+
+# Delete single user
+DELETE http://localhost:5000/api/v1/users/6546b496fbd6228a35868ab7
+Content-Type: application/json
+
+###
+
+# Update user
+PUT http://localhost:5000/api/v1/users/6546cb7cce2c59e869ebffb6
+Content-Type: application/json
+
+{
+  "first_name": "Jane4",
+  "last_name": "Last",
+}

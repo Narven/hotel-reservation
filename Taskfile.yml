@@ -1,0 +1,18 @@
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+  build:
+    cmds:
+      - go build -o bin/api
+
+  run:
+    cmds:
+      - task: build
+      - ./bin/api
+
+  test:
+    cmds:
+      - go test -v ./... -count=1 -cover
